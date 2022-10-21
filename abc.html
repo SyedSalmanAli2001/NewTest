@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Vue</title>
+</head>
+<body>
+    <input type="text" id="textField">
+    <input type="button" id="addText" value="Add Text"> 
+    <ul id="textList">
+        <li>This</li>
+        <li>Is</li>
+        <li>A</li>
+        <li>Test</li>
+        <li>List</li>
+    </ul>
+    <script>
+        let addText = document.getElementById("addText");
+        let textList = document.getElementById("textList");
+        addText.onclick = function(){
+            let textField = document.getElementById("textField")
+            let textItem = document.createElement("li");
+            textItem.innerText = textField.value;
+            textList.appendChild(textItem);
+            textField.value = ""
+
+        }
+    </script>
+</body>
+
+</html>
